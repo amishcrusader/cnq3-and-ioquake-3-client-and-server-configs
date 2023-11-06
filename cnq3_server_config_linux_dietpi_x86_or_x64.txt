@@ -1,0 +1,10 @@
+nano /lib/systemd/system/quake3-server.service
+
+[Service]
+Type=simple
+User=Debian-quake3
+Environment=DAEMON_OPTS=
+EnvironmentFile=-/etc/default/quake3-server
+ExecStart=/usr/games/quake3-server +sv_fps 120 +set com_hunkmegs 128 +set dedic>
+Restart=on-failure
+RestartPreventExitStatus=72

@@ -1,5 +1,7 @@
 
-//for dietpi/debian/ubuntu nano /lib/systemd/system/quake3-server.service
+//for dietpi/debian/ubuntu 
+
+//                 nano /lib/systemd/system/quake3-server.service
 //works with my steam guide https://steamcommunity.com/sharedfiles/filedetails/?id=3059512823
 //needs 'sudo systemctl daemon-reload' after any edit to the quake3-server service!!! (Dietpi/Debian/Ubuntu)
 //Works on x86/x64 ONLY!!! 
@@ -10,6 +12,7 @@
 
 //dpkg --add-architecture i386
 //apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386
+//on atomic pi or any x86/x64 server
 
 
 

@@ -3,7 +3,7 @@
 //works with my steam guide https://steamcommunity.com/sharedfiles/filedetails/?id=3059512823
 //needs 'sudo systemctl daemon-reload' after any edit to the quake3-server service!!! (Dietpi/Debian/Ubuntu)
 
-//dpkg --add-architecture i386dpkg --add-architecture i386
+//dpkg --add-architecture i386
 //apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386
 
 

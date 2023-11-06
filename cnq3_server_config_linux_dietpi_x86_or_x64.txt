@@ -1,10 +1,35 @@
-nano /lib/systemd/system/quake3-server.service
+
+//for dietpi/debian/ubuntu nano /lib/systemd/system/quake3-server.service
+//works with my steam guide https://steamcommunity.com/sharedfiles/filedetails/?id=3059512823
+//needs 'sudo systemctl daemon-reload' after any edit to the quake3-server service!!! (Dietpi/Debian/Ubuntu)
+
+
+
+
+
+[Unit]
+Description=Quake III Arena game server
+After=network.target
+Documentation=man:quake3-server(6)
+# This server and the @server instance would try to use the same
+# configuration, and fight over their home directory
+Conflicts=quake3-server@server.service
 
 [Service]
 Type=simple
 User=Debian-quake3
 Environment=DAEMON_OPTS=
 EnvironmentFile=-/etc/default/quake3-server
-ExecStart=/usr/games/quake3-server +sv_fps 120 +set com_hunkmegs 128 +set dedic>
+ExecStart=/usr/games/quake3-server +sv_fps 120 +set com_hunkmegs 128 +set dedicated 1 +set com_homepath server.q3a +set fs_game cpma +exec /etc/quake3-server/server.cfg +set sv_allowdownloads 1 $DAEMON_OPTS
 Restart=on-failure
 RestartPreventExitStatus=72
+# hardening
+CapabilityBoundingSet=
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

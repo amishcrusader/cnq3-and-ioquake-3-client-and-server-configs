@@ -1,4 +1,5 @@
 nano /etc/quake3-server/server.cfg
+//works with https://steamcommunity.com/sharedfiles/filedetails/?id=3059512823
 // make sure to update these!
 sets .admin.        "Amish"      // server browser info
 sets .location      "my LAN server"    // server browser info

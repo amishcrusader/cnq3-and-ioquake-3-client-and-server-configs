@@ -1,13 +1,10 @@
-//located /etc/quake3-server/server.cfg
-//works with cnq3 dedicaed server engine swap ioquake3 to cnq3 ioq3ded for LAN/CPMA/ra3 maps
-
-
+nano /etc/quake3-server/server.cfg
 // make sure to update these!
 sets .admin.        "Amish"      // server browser info
 sets .location      "my LAN server"    // server browser info
 set sv_hostname     "74 CNQ3 CPMA 250 fps"    // server browser info
 set ref_password    "none"              // "none" means referee/admin access is disabled
-set rconPassword    "7sleepy4"                  // "" means rcon access is disabled
+set rconPassword    "myrconpw"                  // "" means rcon access is disabled
 
 // more useful settings:
 set sv_pure                 "0"         // *always* set to 1 for online servers
@@ -16,7 +13,7 @@ set sv_strictAuth           "0"         // enables CD-key checks
 set server_record           "0"         // bitmask - forces players to record demos, take screenshots, etc
 set server_chatfloodprotect "0"         // max. chat messages per second, 0 means no limit
 set sv_maxrate              "60000"     // good range for players is 25k to 30k
-set sv_allowDownload        "0"         // enables id's super slow download system
+set sv_allowDownload        "1"         // enables id's super slow download system
 set server_gameplay         "CPM"       // only change if you want your server to be lame
 set server_maxpacketsmin    "100"       // ideally cl_maxPackets 125, but allow a bit lower
 set server_maxpacketsmax    "125"       // ideally cl_maxPackets 125
@@ -25,9 +22,9 @@ set server_optimisebw       "1"         // reduces bandwidth a lot but can't see
 set log_pergame             "0"         // opens a new timestamped log file for each game
 set match_readypercent      "51"       // min. % of players that must be ready for a match to start
 set g_gametype              "1"         // 1 is duel
-set sv_maxclients           "24"        // max. player count
+set sv_maxclients           "15"        // max. player count
 set mode_start              "1v1"       // game mode to start with
-set sv_privateClients       "0"         // number of private slots reserved
-set sv_privatePassword      ""          // password for the private slots
+set sv_privateClients       "3"         // number of private slots reserved
+set sv_privatePassword      "myprivclpw"          // password for the private slots
 set sv_minRestartDelay      "2"         // number of hours before reboot - won't reboot as long as humans are still connected!
 map ra3map1

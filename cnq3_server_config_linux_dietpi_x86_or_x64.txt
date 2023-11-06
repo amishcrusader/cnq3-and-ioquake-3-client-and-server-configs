@@ -4,8 +4,10 @@
 //                 nano /lib/systemd/system/quake3-server.service
 //works with my steam guide https://steamcommunity.com/sharedfiles/filedetails/?id=3059512823
 //needs 'sudo systemctl daemon-reload' after any edit to the quake3-server service!!! (Dietpi/Debian/Ubuntu)
-//Works on x86/x64 ONLY!!! 
-//meant for post install of quake3-server, engine swapped to cnq3 (250 fps, x86/x64 only, linux bin pkgs). Details in Steam guide, linked above.
+//Works on x86/x64 ONLY!!! alright this particular .cfg is multiarch, but meant for cnq3ded server renamed to /usr/lib/ioquake3/ioq3ded
+
+//meant for post install of quake3-server, engine swapped to cnq3 (250 fps, x86/x64 only, linux bin pkgs). Details in Steam guide, linked // above.
+
 //both ioq3 (GLE3 backend) + cnq3 client (D3D11backend) binaries/configs in this repo work 120+ fps LAN magic with this config
 
 //run
